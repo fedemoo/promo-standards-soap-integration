@@ -1,0 +1,17 @@
+POST https://wsp.gemline.com/GemlineWebService/ProductData/v2/GemlineProductDataService.svc
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "getProduct"
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.promostandards.org/WSDL/ProductDataService/2.0.0/" xmlns:shar="http://www.promostandards.org/WSDL/ProductDataService/2.0.0/SharedObjects/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:GetProductRequest>
+            <shar:wsVersion>2.0.0</shar:wsVersion>
+            <shar:id>3004775</shar:id>
+            <shar:password>fE1oK6vB4eX8oC9i</shar:password>
+            <shar:localizationCountry>US</shar:localizationCountry>
+            <shar:localizationLanguage>en</shar:localizationLanguage>
+            <shar:productId>102529</shar:productId>
+        </ns:GetProductRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

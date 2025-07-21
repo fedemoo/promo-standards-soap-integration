@@ -1,0 +1,24 @@
+POST https://wsp.gemline.com/GemlineWebService/OrderShipmentNotification/v1/GemlineOrderShipmentNotificationService.svc
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "getOrderShipmentNotification"
+
+
+// seems like if we don't express the referenceNumber we get
+// a list of all orders we have w/ Gemline?
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.promostandards.org/WSDL/OrderShipmentNotificationService/1.0.0/" xmlns:shar="http://www.promostandards.org/WSDL/OrderShipmentNotificationService/1.0.0/SharedObjects/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:GetOrderShipmentNotificationRequest>
+            <shar:wsVersion>1.0.0</shar:wsVersion>
+            <shar:id>3004775</shar:id>
+            <!--Optional:-->
+            <shar:password>fE1oK6vB4eX8oC9i</shar:password>
+            <ns:queryType>1</ns:queryType>
+            <!--Optional:-->
+            <ns:referenceNumber>?</ns:referenceNumber>
+            <!--Optional:-->
+            <ns:shipmentDateTimeStamp>?</ns:shipmentDateTimeStamp>
+        </ns:GetOrderShipmentNotificationRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

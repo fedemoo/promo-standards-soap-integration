@@ -1,0 +1,16 @@
+// list of all available order types
+
+POST https://wsp.gemline.com/GemlineWebService/OrderStatus/v1/GemlineOrderStatusService.svc
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "getOrderStatusTypes"
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.promostandards.org/WSDL/OrderStatusService/1.0.0/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:GetOrderStatusTypesRequest>
+            <ns:wsVersion>1.0.0</ns:wsVersion>
+            <ns:id>3004775</ns:id>
+            <ns:password>fE1oK6vB4eX8oC9i</ns:password>
+        </ns:GetOrderStatusTypesRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

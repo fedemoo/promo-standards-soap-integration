@@ -1,0 +1,25 @@
+POST https://psosn100.pcna.online/psOsn.svc
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "getOrderShipmentNotification"
+
+// seems like if we don't express the referenceNumber we get
+// a list of all orders we have w/ PCNA?
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.promostandards.org/WSDL/OrderShipmentNotificationService/1.0.0/" xmlns:shar="http://www.promostandards.org/WSDL/OrderShipmentNotificationService/1.0.0/SharedObjects/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:GetOrderShipmentNotificationRequest>
+            <!--Optional:-->
+            <shar:wsVersion>?</shar:wsVersion>
+            <!--Optional:-->
+            <shar:id>?</shar:id>
+            <!--Optional:-->
+            <shar:password>?</shar:password>
+            <ns:queryType>?</ns:queryType>
+            <!--Optional:-->
+            <ns:referenceNumber>?</ns:referenceNumber>
+            <!--Optional:-->
+            <ns:shipmentDateTimeStamp>?</ns:shipmentDateTimeStamp>
+        </ns:GetOrderShipmentNotificationRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

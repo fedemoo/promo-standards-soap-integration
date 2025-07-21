@@ -1,0 +1,32 @@
+#POST https://psproductdata200.pcna.online/psProductData.svc
+POST https://psproductdata200-stg.pcna.online/psProductData.svc
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "getProduct"
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.promostandards.org/WSDL/ProductDataService/2.0.0/" xmlns:shar="http://www.promostandards.org/WSDL/ProductDataService/2.0.0/SharedObjects/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:GetProductRequest>
+            <shar:wsVersion>2.0.0</shar:wsVersion>
+            <shar:id>Moo</shar:id>
+            <shar:password>r_zyel0OyUn*g.=@8TCZ>ve}+R4+q1C(w!.UIs.WMOYhmio}9LG>RFJeX+>*3dE</shar:password>
+            <shar:localizationCountry>US</shar:localizationCountry>
+            <shar:localizationLanguage>en</shar:localizationLanguage>
+            <shar:productId>1000</shar:productId>
+<!--            &lt;!&ndash;Optional:&ndash;&gt;-->
+<!--            <shar:partId>?</shar:partId>-->
+<!--            &lt;!&ndash;Optional:&ndash;&gt;-->
+<!--            <shar:colorName>?</shar:colorName>-->
+<!--            &lt;!&ndash;Optional:&ndash;&gt;-->
+<!--            <shar:ApparelSizeArray>-->
+<!--                &lt;!&ndash;Zero or more repetitions:&ndash;&gt;-->
+<!--                <shar:ApparelSize>-->
+<!--                    <shar:apparelStyle>?</shar:apparelStyle>-->
+<!--                    <shar:labelSize>?</shar:labelSize>-->
+<!--                    &lt;!&ndash;Optional:&ndash;&gt;-->
+<!--                    <shar:customSize>?</shar:customSize>-->
+<!--                </shar:ApparelSize>-->
+<!--            </shar:ApparelSizeArray>-->
+        </ns:GetProductRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
