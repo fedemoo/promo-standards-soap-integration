@@ -1,0 +1,20 @@
+#POST https://psproductdata200.pcna.online/psProductData.svc
+POST https://pspriceconfig100-stg.pcna.online/psPriceConfig.svc
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "getConfigurationAndPricing"
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.promostandards.org/WSDL/PricingAndConfiguration/1.0.0/" xmlns:shar="http://www.promostandards.org/WSDL/PricingAndConfiguration/1.0.0/SharedObjects/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:GetConfigurationAndPricingRequest>
+            <!--Optional:-->
+            <shar:wsVersion>1.0.0</shar:wsVersion>
+            <shar:id>Moo</shar:id>
+            <shar:password>r_zyel0OyUn*g.=@8TCZ>ve}+R4+q1C(w!.UIs.WMOYhmio}9LG>RFJeX+>*3dE</shar:password>
+            <!--Optional:-->
+            <shar:productId>1601-81</shar:productId>
+            <shar:fobId>15068</shar:fobId>
+            <shar:configurationType>Decorated</shar:configurationType>
+        </ns:GetConfigurationAndPricingRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

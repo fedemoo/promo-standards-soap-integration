@@ -14,9 +14,9 @@ SOAPAction: "getOrderShipmentNotification"
             <shar:id>3004775</shar:id>
             <!--Optional:-->
             <shar:password>fE1oK6vB4eX8oC9i</shar:password>
-            <ns:queryType>1</ns:queryType>
+            <ns:queryType>4</ns:queryType>
             <!--Optional:-->
-            <ns:referenceNumber>?</ns:referenceNumber>
+            <ns:referenceNumber>101</ns:referenceNumber>
             <!--Optional:-->
             <ns:shipmentDateTimeStamp>?</ns:shipmentDateTimeStamp>
         </ns:GetOrderShipmentNotificationRequest>

@@ -1,6 +1,6 @@
 // list of all available order types
 
-POST https://wsp.gemline.com/GemlineWebService/OrderStatus/v1/GemlineOrderStatusService.svc
+POST https://wsd.gemline.com/GemlineWebService/OrderStatus/v1/GemlineOrderStatusService.svc
 Content-Type: text/xml;charset=UTF-8
 SOAPAction: "getOrderStatusTypes"
 

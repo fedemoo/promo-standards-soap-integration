@@ -7,382 +7,225 @@ SOAPAction: "sendPO"
     <soapenv:Header/>
     <soapenv:Body>
         <ns:SendPORequest>
-            <shar:wsVersion>?</shar:wsVersion>
-            <shar:id>?</shar:id>
-            <shar:password>?</shar:password>
+            <shar:wsVersion>1.0.0</shar:wsVersion>
+            <shar:id>Moo</shar:id>
+            <shar:password>r_zyel0OyUn*g.=@8TCZ>ve}+R4+q1C(w!.UIs.WMOYhmio}9LG>RFJeX+>*3dE</shar:password>
             <ns:PO>
-                <ns:orderType>?</ns:orderType>
-                <!--Optional:-->
-                <ns:orderNumber>?</ns:orderNumber>
-                <ns:orderDate>?</ns:orderDate>
-                <!--Optional:-->
-                <ns:lastModified>?</ns:lastModified>
-                <ns:totalAmount>?</ns:totalAmount>
-                <!--Optional:-->
-                <ns:paymentTerms>?</ns:paymentTerms>
-                <ns:rush>?</ns:rush>
-                <shar:currency>?</shar:currency>
-                <!--Optional:-->
-                <shar:DigitalProof>
-                    <!--Optional:-->
-                    <shar:DigitalProofAddressArray>
-                        <!--Zero or more repetitions:-->
-                        <shar:DigitalProofAddress>
-                            <shar:type>?</shar:type>
-                            <!--Optional:-->
-                            <shar:email>?</shar:email>
-                            <shar:lineItemGroupingId>?</shar:lineItemGroupingId>
-                        </shar:DigitalProofAddress>
-                    </shar:DigitalProofAddressArray>
-                    <shar:required>?</shar:required>
-                </shar:DigitalProof>
-                <!--Optional:-->
+                <ns:orderType>Configured</ns:orderType>
+                <ns:orderNumber>moo-test-order-18</ns:orderNumber>
+                <ns:orderDate>2025-09-04T10:45:00</ns:orderDate>
+
+
+<!--                <ns:totalAmount>100.00</ns:totalAmount>-->
+
+<!--                <ns:rush>false</ns:rush>-->
+                <shar:currency>USD</shar:currency>
                 <ns:OrderContactArray>
-                    <!--Zero or more repetitions:-->
+
                     <shar:Contact>
                         <!--Optional:-->
-                        <shar:accountName>?</shar:accountName>
+                        <shar:accountName>ERIC'S COMPANY</shar:accountName>
                         <!--Optional:-->
-                        <shar:accountNumber>?</shar:accountNumber>
-                        <shar:contactType>?</shar:contactType>
+                        <shar:accountNumber>229014</shar:accountNumber>
+                        <shar:contactType>Bill</shar:contactType>
                         <!--Optional:-->
                         <shar:ContactDetails>
                             <!--Optional:-->
-                            <shar:attentionTo>?</shar:attentionTo>
+                            <shar:attentionTo>ERIC WINGARD</shar:attentionTo>
                             <!--Optional:-->
-                            <shar:companyName>?</shar:companyName>
+                            <shar:companyName>ERIC'S COMPANY</shar:companyName>
                             <!--Optional:-->
-                            <shar:address1>?</shar:address1>
+                            <shar:address1>400 HUNT VALLEY ROAD</shar:address1>
                             <!--Optional:-->
-                            <shar:address2>?</shar:address2>
+                            <shar:city>PITTSBURGH</shar:city>
                             <!--Optional:-->
-                            <shar:address3>?</shar:address3>
+                            <shar:region>PA</shar:region>
                             <!--Optional:-->
-                            <shar:city>?</shar:city>
+                            <shar:postalCode>15068</shar:postalCode>
                             <!--Optional:-->
-                            <shar:region>?</shar:region>
+                            <shar:country>US</shar:country>
                             <!--Optional:-->
-                            <shar:postalCode>?</shar:postalCode>
+                            <shar:email>ewingard@pcna.com</shar:email>
                             <!--Optional:-->
-                            <shar:country>?</shar:country>
-                            <!--Optional:-->
-                            <shar:email>?</shar:email>
-                            <!--Optional:-->
-                            <shar:phone>?</shar:phone>
-                            <!--Optional:-->
-                            <shar:comments>?</shar:comments>
+<!--                            <shar:phone>8142441509</shar:phone>-->
                         </shar:ContactDetails>
                     </shar:Contact>
                 </ns:OrderContactArray>
-                <!--Optional:-->
+
                 <ns:ShipmentArray>
-                    <!--Zero or more repetitions:-->
+                    <!--1 or more repetitions:-->
                     <shar:Shipment>
-                        <!--Zero or more repetitions:-->
-                        <shar:shipReferences>?</shar:shipReferences>
+                        <!--0 to 2 repetitions:-->
+                        <shar:shipReferences>Ref123</shar:shipReferences>
                         <!--Optional:-->
-                        <shar:comments>?</shar:comments>
-                        <!--Optional:-->
+<!--                        <shar:allowConsolidation>false</shar:allowConsolidation>-->
+                        <shar:blindShip>true</shar:blindShip>
+                        <shar:packingListRequired>true</shar:packingListRequired>
                         <shar:ThirdPartyAccount>
                             <!--Optional:-->
-                            <shar:accountName>?</shar:accountName>
+                            <shar:accountName>ED'S FEDEX</shar:accountName>
                             <!--Optional:-->
-                            <shar:accountNumber>?</shar:accountNumber>
+                            <shar:accountNumber>123456789</shar:accountNumber>
                             <!--Optional:-->
                             <shar:ContactDetails>
                                 <!--Optional:-->
-                                <shar:attentionTo>?</shar:attentionTo>
+                                <shar:attentionTo>ED WINGARD JR</shar:attentionTo>
                                 <!--Optional:-->
-                                <shar:companyName>?</shar:companyName>
+                                <shar:companyName>FAST EDDIE'S BAR</shar:companyName>
                                 <!--Optional:-->
-                                <shar:address1>?</shar:address1>
+                                <shar:address1>128 BRECK LANE</shar:address1>
                                 <!--Optional:-->
-                                <shar:address2>?</shar:address2>
+
                                 <!--Optional:-->
-                                <shar:address3>?</shar:address3>
+                                <shar:city>JOHNSTOWN</shar:city>
                                 <!--Optional:-->
-                                <shar:city>?</shar:city>
+                                <shar:region>PA</shar:region>
                                 <!--Optional:-->
-                                <shar:region>?</shar:region>
+                                <shar:postalCode>15904</shar:postalCode>
                                 <!--Optional:-->
-                                <shar:postalCode>?</shar:postalCode>
+                                <shar:country>US</shar:country>
                                 <!--Optional:-->
-                                <shar:country>?</shar:country>
+                                <shar:email>FASTEDDIEJR3@GMAIL.COM</shar:email>
                                 <!--Optional:-->
-                                <shar:email>?</shar:email>
-                                <!--Optional:-->
-                                <shar:phone>?</shar:phone>
-                                <!--Optional:-->
-                                <shar:comments>?</shar:comments>
+                                <shar:phone>8142667115</shar:phone>
                             </shar:ContactDetails>
                         </shar:ThirdPartyAccount>
-                        <shar:allowConsolidation>?</shar:allowConsolidation>
-                        <shar:blindShip>?</shar:blindShip>
-                        <shar:packingListRequired>?</shar:packingListRequired>
-                        <!--Optional:-->
                         <shar:FreightDetails>
-                            <!--Optional:-->
-                            <shar:carrier>?</shar:carrier>
-                            <!--Optional:-->
-                            <shar:service>?</shar:service>
+                            <shar:carrier>FEDEX</shar:carrier>
+                            <shar:service>GROUND</shar:service>
                         </shar:FreightDetails>
-                        <!--Optional:-->
                         <shar:ShipTo>
-                            <shar:customerPickup>?</shar:customerPickup>
-                            <!--Optional:-->
+
+                            <shar:shipmentId>100</shar:shipmentId>
                             <shar:ContactDetails>
                                 <!--Optional:-->
-                                <shar:attentionTo>?</shar:attentionTo>
+<!--                                <shar:attentionTo>ED WINGARD JR</shar:attentionTo>-->
                                 <!--Optional:-->
-                                <shar:companyName>?</shar:companyName>
+                                <shar:companyName>FAST EDDIE'S BAR</shar:companyName>
                                 <!--Optional:-->
-                                <shar:address1>?</shar:address1>
+                                <shar:address1>128 BRECK LANE</shar:address1>
                                 <!--Optional:-->
-                                <shar:address2>?</shar:address2>
+
                                 <!--Optional:-->
-                                <shar:address3>?</shar:address3>
+                                <shar:city>JOHNSTOWN</shar:city>
                                 <!--Optional:-->
-                                <shar:city>?</shar:city>
+                                <shar:region>PA</shar:region>
                                 <!--Optional:-->
-                                <shar:region>?</shar:region>
+                                <shar:postalCode>15904</shar:postalCode>
                                 <!--Optional:-->
-                                <shar:postalCode>?</shar:postalCode>
+                                <shar:country>US</shar:country>
                                 <!--Optional:-->
-                                <shar:country>?</shar:country>
+                                <shar:email>FASTEDDIEJR3@GMAIL.COM</shar:email>
                                 <!--Optional:-->
-                                <shar:email>?</shar:email>
-                                <!--Optional:-->
-                                <shar:phone>?</shar:phone>
-                                <!--Optional:-->
-                                <shar:comments>?</shar:comments>
+                                <shar:phone>8142667115</shar:phone>
                             </shar:ContactDetails>
-                            <shar:shipmentId>?</shar:shipmentId>
+
                         </shar:ShipTo>
                     </shar:Shipment>
                 </ns:ShipmentArray>
-                <!--Optional:-->
                 <ns:LineItemArray>
-                    <!--Zero or more repetitions:-->
+                    <!--1 or more repetitions:-->
                     <ns:LineItem>
-                        <ns:lineNumber>?</ns:lineNumber>
+                        <shar:fobId>15068</shar:fobId>
+                        <ns:lineNumber>1</ns:lineNumber>
                         <!--Optional:-->
-                        <ns:lineReferenceId>?</ns:lineReferenceId>
-                        <!--Optional:-->
-                        <shar:description>?</shar:description>
-                        <ns:lineType>?</ns:lineType>
+                        <ns:lineReferenceId>102529</ns:lineReferenceId>
+                        <shar:description>Copper Vacuum Insulated Bottle 17oz</shar:description>
+                        <ns:lineType>New</ns:lineType>
                         <!--Optional:-->
                         <shar:Quantity>
-                            <shar:uom>?</shar:uom>
-                            <shar:value>?</shar:value>
+                            <shar:uom>EA</shar:uom>
+                            <shar:value>100</shar:value>
                         </shar:Quantity>
-                        <!--Optional:-->
-                        <shar:fobId>?</shar:fobId>
-                        <!--Optional:-->
                         <shar:ToleranceDetails>
-                            <!--Optional:-->
-                            <shar:uom>?</shar:uom>
-                            <!--Optional:-->
-                            <shar:value>?</shar:value>
-                            <shar:tolerance>?</shar:tolerance>
+                            <shar:tolerance>ExactOnly</shar:tolerance>
                         </shar:ToleranceDetails>
-                        <ns:allowPartialShipments>?</ns:allowPartialShipments>
-                        <!--Optional:-->
-                        <shar:unitPrice>?</shar:unitPrice>
-                        <ns:lineItemTotal>?</ns:lineItemTotal>
-                        <!--Optional:-->
-                        <ns:requestedShipDate>?</ns:requestedShipDate>
-                        <!--Optional:-->
-                        <ns:requestedInHandsDate>?</ns:requestedInHandsDate>
-                        <!--Optional:-->
-                        <ns:referenceSalesQuote>?</ns:referenceSalesQuote>
-                        <!--Optional:-->
-                        <shar:Program>
-                            <!--Optional:-->
-                            <shar:id>?</shar:id>
-                            <!--Optional:-->
-                            <shar:name>?</shar:name>
-                        </shar:Program>
-                        <!--Optional:-->
-                        <ns:endCustomerSalesOrder>?</ns:endCustomerSalesOrder>
-                        <!--Optional:-->
-                        <shar:productId>?</shar:productId>
-                        <!--Optional:-->
-                        <ns:customerProductId>?</ns:customerProductId>
-                        <!--Optional:-->
-                        <shar:lineItemGroupingId>?</shar:lineItemGroupingId>
-                        <!--Optional:-->
+<!--                        <ns:allowPartialShipments>false</ns:allowPartialShipments>-->
+                        <shar:productId>1601-81</shar:productId>
                         <ns:PartArray>
-                            <!--Zero or more repetitions:-->
-                            <shar:Part>
-                                <!--Optional:-->
-                                <shar:partGroup>?</shar:partGroup>
-                                <!--Optional:-->
-                                <shar:partId>?</shar:partId>
-                                <!--Optional:-->
-                                <shar:customerPartId>?</shar:customerPartId>
-                                <shar:customerSupplied>?</shar:customerSupplied>
-                                <!--Optional:-->
-                                <shar:description>?</shar:description>
-                                <!--Optional:-->
-                                <shar:Quantity>
-                                    <shar:uom>?</shar:uom>
-                                    <shar:value>?</shar:value>
-                                </shar:Quantity>
-                                <!--Zero or more repetitions:-->
-                                <shar:locationLinkId>?</shar:locationLinkId>
-                                <!--Optional:-->
-                                <shar:unitPrice>?</shar:unitPrice>
-                                <!--Optional:-->
-                                <shar:extendedPrice>?</shar:extendedPrice>
-                                <!--Optional:-->
-                                <shar:ShipmentLinkArray>
-                                    <!--Zero or more repetitions:-->
-                                    <shar:ShipmentLink>
-                                        <!--Optional:-->
-                                        <shar:Quantity>
-                                            <shar:uom>?</shar:uom>
-                                            <shar:value>?</shar:value>
-                                        </shar:Quantity>
-                                        <shar:shipmentId>?</shar:shipmentId>
-                                    </shar:ShipmentLink>
-                                </shar:ShipmentLinkArray>
-                            </shar:Part>
-                        </ns:PartArray>
-                        <!--Optional:-->
-                        <shar:Configuration>
+                        <!--Zero or more repetitions:-->
+                        <shar:Part>
+<!--                            <shar:partGroup>1</shar:partGroup>-->
+                            <shar:partId>1601-81BK</shar:partId>
+<!--                            <shar:customerSupplied>false</shar:customerSupplied>-->
+<!--                            <shar:description>Hydro Flask® Wide Mouth w/ Flex Straw Cap 32oz</shar:description>-->
+                            <shar:Quantity>
+                                <shar:uom>EA</shar:uom>
+                                <shar:value>100</shar:value>
+                            </shar:Quantity>
+                            <shar:locationLinkId>1</shar:locationLinkId>
+<!--                            <shar:unitPrice>8.57</shar:unitPrice>-->
+<!--                            <shar:extendedPrice>857</shar:extendedPrice>-->
                             <!--Optional:-->
-                            <shar:ChargeArray>
+                            <shar:ShipmentLinkArray>
                                 <!--Zero or more repetitions:-->
-                                <shar:Charge>
-                                    <!--Optional:-->
-                                    <shar:chargeName>?</shar:chargeName>
-                                    <!--Optional:-->
-                                    <shar:description>?</shar:description>
-                                    <!--Optional:-->
-                                    <shar:extendedPrice>?</shar:extendedPrice>
-                                    <!--Optional:-->
-                                    <shar:unitPrice>?</shar:unitPrice>
-                                    <shar:chargeId>?</shar:chargeId>
-                                    <shar:chargeType>?</shar:chargeType>
+                                <shar:ShipmentLink>
                                     <!--Optional:-->
                                     <shar:Quantity>
-                                        <shar:uom>?</shar:uom>
-                                        <shar:value>?</shar:value>
+                                        <shar:uom>EA</shar:uom>
+                                        <shar:value>100</shar:value>
                                     </shar:Quantity>
-                                </shar:Charge>
-                            </shar:ChargeArray>
-                            <!--Optional:-->
+                                    <shar:shipmentId>100</shar:shipmentId>
+                                </shar:ShipmentLink>
+                            </shar:ShipmentLinkArray>
+                        </shar:Part>
+                        </ns:PartArray>
+                        <shar:Configuration>
                             <shar:LocationArray>
                                 <!--Zero or more repetitions:-->
                                 <shar:Location>
                                     <!--Optional:-->
-                                    <shar:locationName>?</shar:locationName>
+                                    <shar:locationName>Centered on tumbler opposite Hydro Flask, - Center of art 3.68" up from bottom</shar:locationName>
                                     <!--Optional:-->
                                     <shar:DecorationArray>
                                         <!--Zero or more repetitions:-->
                                         <shar:Decoration>
                                             <!--Optional:-->
-                                            <shar:decorationName>?</shar:decorationName>
+                                            <shar:decorationName>Digital Color Print</shar:decorationName>
                                             <!--Optional:-->
                                             <shar:Artwork>
-                                                <!--Optional:-->
-                                                <shar:instructions>?</shar:instructions>
-                                                <!--Optional:-->
-                                                <shar:refArtworkId>?</shar:refArtworkId>
-                                                <!--Optional:-->
-                                                <shar:totalStitchCount>?</shar:totalStitchCount>
-                                                <!--Optional:-->
                                                 <shar:ArtworkFileArray>
                                                     <!--Zero or more repetitions:-->
                                                     <shar:ArtworkFile>
-                                                        <shar:artworkType>?</shar:artworkType>
+                                                        <shar:artworkType>ProductionReady</shar:artworkType>
                                                         <!--Optional:-->
-                                                        <shar:fileLocation>?</shar:fileLocation>
+                                                        <shar:fileLocation>https://integrationdesignerimages.artifi.net/UserPhoto/ba4ad608-c4bd-4e71-b14b-81506445b434/Photos/Standard/1404320511b1a5-cad3-4bce-b9eb-51f5fbc6cb81.png</shar:fileLocation>
                                                         <!--Optional:-->
-                                                        <shar:fileName>?</shar:fileName>
-                                                        <shar:transportMechanism>?</shar:transportMechanism>
+                                                        <shar:fileName>1404320511b1a5-cad3-4bce-b9eb-51f5fbc6cb81.png</shar:fileName>
+                                                        <shar:transportMechanism>Url</shar:transportMechanism>
                                                     </shar:ArtworkFile>
                                                 </shar:ArtworkFileArray>
                                                 <!--Optional:-->
-                                                <shar:description>?</shar:description>
+                                                <shar:description>NASA LOGO</shar:description>
                                                 <!--Optional:-->
                                                 <shar:Dimensions>
-                                                    <!--Optional:-->
-                                                    <shar:diameter>?</shar:diameter>
-                                                    <!--Optional:-->
-                                                    <shar:height>?</shar:height>
-                                                    <!--Optional:-->
-                                                    <shar:uom>?</shar:uom>
-                                                    <!--Optional:-->
-                                                    <shar:width>?</shar:width>
-                                                    <shar:useMaxLocationDimensions>?</shar:useMaxLocationDimensions>
-                                                    <shar:geometry>?</shar:geometry>
+
+                                                    <shar:useMaxLocationDimensions>true</shar:useMaxLocationDimensions>
+<!--                                                    <shar:geometry>Rectangle</shar:geometry>-->
                                                 </shar:Dimensions>
-                                                <!--Optional:-->
                                                 <shar:Layers>
-                                                    <shar:colorSystem>?</shar:colorSystem>
-                                                    <!--Optional:-->
+                                                    <shar:colorSystem>Cmyk</shar:colorSystem>
                                                     <shar:LayerOrStopArray>
-                                                        <!--Zero or more repetitions:-->
                                                         <shar:LayerOrStop>
-                                                            <!--Optional:-->
-                                                            <shar:color>?</shar:color>
-                                                            <!--Optional:-->
-                                                            <shar:nameOrNumber>?</shar:nameOrNumber>
-                                                            <!--Optional:-->
-                                                            <shar:description>?</shar:description>
+                                                                <shar:color>C:100 M:0 Y:0 K:0</shar:color>
+                                                                <shar:nameOrNumber>Cyan</shar:nameOrNumber>
+                                                                <shar:description>Main background fill</shar:description>
                                                         </shar:LayerOrStop>
                                                     </shar:LayerOrStopArray>
                                                 </shar:Layers>
-                                                <!--Optional:-->
-                                                <shar:TypesetArray>
-                                                    <!--Zero or more repetitions:-->
-                                                    <shar:Typeset>
-                                                        <!--Optional:-->
-                                                        <shar:fontSize>?</shar:fontSize>
-                                                        <!--Optional:-->
-                                                        <shar:font>?</shar:font>
-                                                        <shar:sequenceNumber>?</shar:sequenceNumber>
-                                                        <!--Optional:-->
-                                                        <shar:value>?</shar:value>
-                                                    </shar:Typeset>
-                                                </shar:TypesetArray>
                                             </shar:Artwork>
-                                            <shar:decorationId>?</shar:decorationId>
+                                            <shar:decorationId>171</shar:decorationId>
                                         </shar:Decoration>
                                     </shar:DecorationArray>
-                                    <shar:locationLinkId>?</shar:locationLinkId>
-                                    <shar:locationId>?</shar:locationId>
+                                    <shar:locationLinkId>1</shar:locationLinkId>
+                                    <shar:locationId>17705</shar:locationId>
                                 </shar:Location>
                             </shar:LocationArray>
-                            <!--Optional:-->
-                            <shar:referenceNumberType>?</shar:referenceNumberType>
-                            <!--Optional:-->
-                            <shar:referenceNumber>?</shar:referenceNumber>
-                            <shar:preProductionProof>?</shar:preProductionProof>
+<!--                            <shar:preProductionProof>false</shar:preProductionProof>-->
                         </shar:Configuration>
                     </ns:LineItem>
                 </ns:LineItemArray>
-                <!--Optional:-->
-                <ns:termsAndConditions>?</ns:termsAndConditions>
-                <!--Optional:-->
-                <ns:salesChannel>?</ns:salesChannel>
-                <!--Optional:-->
-                <ns:promoCode>?</ns:promoCode>
-                <!--Optional:-->
-                <ns:TaxInformationArray>
-                    <!--Zero or more repetitions:-->
-                    <shar:TaxInformation>
-                        <!--Zero or more repetitions:-->
-                        <shar:taxJurisdiction>?</shar:taxJurisdiction>
-                        <shar:taxExempt>?</shar:taxExempt>
-                        <!--Optional:-->
-                        <shar:taxId>?</shar:taxId>
-                        <shar:taxType>?</shar:taxType>
-                        <!--Optional:-->
-                        <shar:taxAmount>?</shar:taxAmount>
-                    </shar:TaxInformation>
-                </ns:TaxInformationArray>
+                <ns:termsAndConditions>terms</ns:termsAndConditions>
             </ns:PO>
         </ns:SendPORequest>
     </soapenv:Body>

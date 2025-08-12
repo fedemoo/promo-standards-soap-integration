@@ -1,4 +1,4 @@
-POST https://wsp.gemline.com/GemlineWebService/PO/v1/GemlinePOService.svc
+POST https://wsd.gemline.com/GemlineWebService/PO/v1/GemlinePOService.svc
 Content-Type: text/xml;charset=UTF-8
 SOAPAction: "sendPO"
 
@@ -10,347 +10,140 @@ SOAPAction: "sendPO"
             <shar:id>3004775</shar:id>
             <shar:password>fE1oK6vB4eX8oC9i</shar:password>
             <ns:PO>
-                <ns:orderType>?</ns:orderType>
-                <ns:orderNumber>?</ns:orderNumber>
-                <ns:orderDate>?</ns:orderDate>
-                <!--Optional:-->
-                <ns:lastModified>?</ns:lastModified>
-                <ns:totalAmount>?</ns:totalAmount>
-                <!--Optional:-->
-                <ns:paymentTerms>?</ns:paymentTerms>
-                <ns:rush>?</ns:rush>
-                <shar:currency>?</shar:currency>
-                <!--Optional:-->
+                <ns:orderType>Configured</ns:orderType>
+                <ns:orderNumber>1000005</ns:orderNumber>
+                <ns:orderDate>2025-08-04T10:45:00</ns:orderDate>
+
+                <ns:rush>false</ns:rush>
+                <shar:currency>USD</shar:currency>
                 <shar:DigitalProof>
-                    <shar:DigitalProofAddressArray>
-                        <!--1 or more repetitions:-->
-                        <shar:DigitalProofAddress>
-                            <shar:type>?</shar:type>
-                            <shar:email>?</shar:email>
-                            <shar:lineItemGroupingId>?</shar:lineItemGroupingId>
-                        </shar:DigitalProofAddress>
-                    </shar:DigitalProofAddressArray>
-                    <shar:required>?</shar:required>
+                    <shar:required>false</shar:required>
                 </shar:DigitalProof>
-                <!--Optional:-->
                 <ns:OrderContactArray>
-                    <!--1 or more repetitions:-->
                     <shar:Contact>
-                        <!--Optional:-->
-                        <shar:accountName>?</shar:accountName>
-                        <!--Optional:-->
-                        <shar:accountNumber>?</shar:accountNumber>
-                        <shar:contactType>?</shar:contactType>
+                        <shar:accountName>ERIC'S COMPANY</shar:accountName>
+                        <shar:accountNumber>229014</shar:accountNumber>
+                        <shar:contactType>Bill</shar:contactType>
                         <shar:ContactDetails>
-                            <!--Optional:-->
-                            <shar:attentionTo>?</shar:attentionTo>
-                            <!--Optional:-->
-                            <shar:companyName>?</shar:companyName>
-                            <!--Optional:-->
-                            <shar:address1>?</shar:address1>
-                            <!--Optional:-->
-                            <shar:address2>?</shar:address2>
-                            <!--Optional:-->
-                            <shar:address3>?</shar:address3>
-                            <!--Optional:-->
-                            <shar:city>?</shar:city>
-                            <!--Optional:-->
-                            <shar:region>?</shar:region>
-                            <!--Optional:-->
-                            <shar:postalCode>?</shar:postalCode>
-                            <!--Optional:-->
-                            <shar:country>?</shar:country>
-                            <!--Optional:-->
-                            <shar:email>?</shar:email>
-                            <!--Optional:-->
-                            <shar:phone>?</shar:phone>
-                            <!--Optional:-->
-                            <shar:comments>?</shar:comments>
+                            <shar:attentionTo>Jane Smith</shar:attentionTo>
+                            <shar:companyName>Acme Corp</shar:companyName>
+                            <shar:address1>123 Main St</shar:address1>
+                            <shar:city>New York</shar:city>
+                            <shar:region>NY</shar:region>
+                            <shar:postalCode>10001</shar:postalCode>
+                            <shar:country>US</shar:country>
+                            <shar:email>jane.smith@example.com</shar:email>
+                            <shar:phone>555-123-4567</shar:phone>
                         </shar:ContactDetails>
                     </shar:Contact>
                 </ns:OrderContactArray>
+
                 <ns:ShipmentArray>
-                    <!--1 or more repetitions:-->
                     <shar:Shipment>
-                        <!--0 to 2 repetitions:-->
-                        <shar:shipReferences>?</shar:shipReferences>
-                        <!--Optional:-->
-                        <shar:comments>?</shar:comments>
-                        <!--Optional:-->
-                        <shar:ThirdPartyAccount>
-                            <shar:accountName>?</shar:accountName>
-                            <shar:accountNumber>?</shar:accountNumber>
-                            <shar:ContactDetails>
-                                <!--Optional:-->
-                                <shar:attentionTo>?</shar:attentionTo>
-                                <!--Optional:-->
-                                <shar:companyName>?</shar:companyName>
-                                <!--Optional:-->
-                                <shar:address1>?</shar:address1>
-                                <!--Optional:-->
-                                <shar:address2>?</shar:address2>
-                                <!--Optional:-->
-                                <shar:address3>?</shar:address3>
-                                <!--Optional:-->
-                                <shar:city>?</shar:city>
-                                <!--Optional:-->
-                                <shar:region>?</shar:region>
-                                <!--Optional:-->
-                                <shar:postalCode>?</shar:postalCode>
-                                <!--Optional:-->
-                                <shar:country>?</shar:country>
-                                <!--Optional:-->
-                                <shar:email>?</shar:email>
-                                <!--Optional:-->
-                                <shar:phone>?</shar:phone>
-                                <!--Optional:-->
-                                <shar:comments>?</shar:comments>
-                            </shar:ContactDetails>
-                        </shar:ThirdPartyAccount>
-                        <shar:allowConsolidation>?</shar:allowConsolidation>
-                        <shar:blindShip>?</shar:blindShip>
-                        <shar:packingListRequired>?</shar:packingListRequired>
+                        <shar:shipReferences>Ref123</shar:shipReferences>
+                        <shar:allowConsolidation>false</shar:allowConsolidation>
+                        <shar:blindShip>true</shar:blindShip>
+                        <shar:packingListRequired>true</shar:packingListRequired>
                         <shar:FreightDetails>
-                            <shar:carrier>?</shar:carrier>
-                            <shar:service>?</shar:service>
+                            <shar:carrier>FedEx</shar:carrier>
+                            <shar:service>2Day</shar:service>
                         </shar:FreightDetails>
                         <shar:ShipTo>
-                            <shar:customerPickup>?</shar:customerPickup>
+                            <shar:customerPickup>false</shar:customerPickup>
                             <shar:ContactDetails>
-                                <!--Optional:-->
-                                <shar:attentionTo>?</shar:attentionTo>
-                                <!--Optional:-->
-                                <shar:companyName>?</shar:companyName>
-                                <!--Optional:-->
-                                <shar:address1>?</shar:address1>
-                                <!--Optional:-->
-                                <shar:address2>?</shar:address2>
-                                <!--Optional:-->
-                                <shar:address3>?</shar:address3>
-                                <!--Optional:-->
-                                <shar:city>?</shar:city>
-                                <!--Optional:-->
-                                <shar:region>?</shar:region>
-                                <!--Optional:-->
-                                <shar:postalCode>?</shar:postalCode>
-                                <!--Optional:-->
-                                <shar:country>?</shar:country>
-                                <!--Optional:-->
-                                <shar:email>?</shar:email>
-                                <!--Optional:-->
-                                <shar:phone>?</shar:phone>
-                                <!--Optional:-->
-                                <shar:comments>?</shar:comments>
+                                <shar:attentionTo>Jane Smith</shar:attentionTo>
+                                <shar:companyName>Acme Corp</shar:companyName>
+                                <shar:address1>123 Main St</shar:address1>
+                                <shar:city>New York</shar:city>
+                                <shar:region>NY</shar:region>
+                                <shar:postalCode>10001</shar:postalCode>
+                                <shar:country>US</shar:country>
+                                <shar:email>jane.smith@example.com</shar:email>
+                                <shar:phone>555-123-4567</shar:phone>
                             </shar:ContactDetails>
-                            <shar:shipmentId>?</shar:shipmentId>
+                            <shar:shipmentId>100</shar:shipmentId>
                         </shar:ShipTo>
                     </shar:Shipment>
                 </ns:ShipmentArray>
                 <ns:LineItemArray>
-                    <!--1 or more repetitions:-->
                     <ns:LineItem>
-                        <ns:lineNumber>?</ns:lineNumber>
-                        <!--Optional:-->
-                        <ns:lineReferenceId>?</ns:lineReferenceId>
-                        <shar:description>?</shar:description>
-                        <ns:lineType>?</ns:lineType>
-                        <!--Optional:-->
+                        <ns:lineNumber>1</ns:lineNumber>
+                        <ns:lineReferenceId>102529</ns:lineReferenceId>
+                        <shar:description>test</shar:description>
+                        <ns:lineType>New</ns:lineType>
                         <shar:Quantity>
-                            <shar:uom>?</shar:uom>
-                            <shar:value>?</shar:value>
+                            <shar:uom>EA</shar:uom>
+                            <shar:value>100</shar:value>
                         </shar:Quantity>
-                        <!--Optional:-->
-                        <shar:fobId>?</shar:fobId>
+                        <shar:fobId>1</shar:fobId>
                         <shar:ToleranceDetails>
-                            <!--Optional:-->
-                            <shar:uom>?</shar:uom>
-                            <!--Optional:-->
-                            <shar:value>?</shar:value>
-                            <shar:tolerance>?</shar:tolerance>
+                            <shar:tolerance>ExactOnly</shar:tolerance>
                         </shar:ToleranceDetails>
-                        <ns:allowPartialShipments>?</ns:allowPartialShipments>
-                        <!--Optional:-->
-                        <shar:unitPrice>?</shar:unitPrice>
-                        <ns:lineItemTotal>?</ns:lineItemTotal>
-                        <!--Optional:-->
-                        <ns:requestedShipDate>?</ns:requestedShipDate>
-                        <!--Optional:-->
-                        <ns:requestedInHandsDate>?</ns:requestedInHandsDate>
-                        <!--Optional:-->
-                        <ns:referenceSalesQuote>?</ns:referenceSalesQuote>
-                        <!--Optional:-->
-                        <shar:Program>
-                            <!--Optional:-->
-                            <shar:id>?</shar:id>
-                            <!--Optional:-->
-                            <shar:name>?</shar:name>
-                        </shar:Program>
-                        <!--Optional:-->
-                        <ns:endCustomerSalesOrder>?</ns:endCustomerSalesOrder>
-                        <!--Optional:-->
-                        <shar:productId>?</shar:productId>
-                        <!--Optional:-->
-                        <ns:customerProductId>?</ns:customerProductId>
-                        <!--Optional:-->
-                        <shar:lineItemGroupingId>?</shar:lineItemGroupingId>
-                        <!--Optional:-->
+                        <ns:allowPartialShipments>false</ns:allowPartialShipments>
+
+                        <shar:productId>102529</shar:productId>
+                        <shar:lineItemGroupingId>1</shar:lineItemGroupingId>
                         <ns:PartArray>
-                            <!--1 or more repetitions:-->
                             <shar:Part>
-                                <!--Optional:-->
-                                <shar:partGroup>?</shar:partGroup>
-                                <shar:partId>?</shar:partId>
-                                <!--Optional:-->
-                                <shar:customerPartId>?</shar:customerPartId>
-                                <shar:customerSupplied>?</shar:customerSupplied>
-                                <!--Optional:-->
-                                <shar:description>?</shar:description>
+                                <shar:partGroup>1</shar:partGroup>
+                                <shar:partId>102529-639</shar:partId>
+                                <shar:customerSupplied>false</shar:customerSupplied>
+                                <shar:description>Ahead The Force Recycled Performance Cap - Trench</shar:description>
                                 <shar:Quantity>
-                                    <shar:uom>?</shar:uom>
-                                    <shar:value>?</shar:value>
+                                    <shar:uom>EA</shar:uom>
+                                    <shar:value>100</shar:value>
                                 </shar:Quantity>
-                                <!--Zero or more repetitions:-->
-                                <shar:locationLinkId>?</shar:locationLinkId>
-                                <!--Optional:-->
-                                <shar:unitPrice>?</shar:unitPrice>
-                                <!--Optional:-->
-                                <shar:extendedPrice>?</shar:extendedPrice>
-                                <!--Optional:-->
+                                <shar:locationLinkId>1</shar:locationLinkId>
                                 <shar:ShipmentLinkArray>
-                                    <!--1 or more repetitions:-->
                                     <shar:ShipmentLink>
                                         <shar:Quantity>
-                                            <shar:uom>?</shar:uom>
-                                            <shar:value>?</shar:value>
+                                            <shar:uom>EA</shar:uom>
+                                            <shar:value>100</shar:value>
                                         </shar:Quantity>
-                                        <shar:shipmentId>?</shar:shipmentId>
+                                        <shar:shipmentId>100</shar:shipmentId>
                                     </shar:ShipmentLink>
                                 </shar:ShipmentLinkArray>
                             </shar:Part>
                         </ns:PartArray>
-                        <!--Optional:-->
                         <shar:Configuration>
-                            <!--Optional:-->
-                            <shar:ChargeArray>
-                                <!--1 or more repetitions:-->
-                                <shar:Charge>
-                                    <!--Optional:-->
-                                    <shar:chargeName>?</shar:chargeName>
-                                    <!--Optional:-->
-                                    <shar:description>?</shar:description>
-                                    <!--Optional:-->
-                                    <shar:extendedPrice>?</shar:extendedPrice>
-                                    <!--Optional:-->
-                                    <shar:unitPrice>?</shar:unitPrice>
-                                    <shar:chargeId>?</shar:chargeId>
-                                    <shar:chargeType>?</shar:chargeType>
-                                    <shar:Quantity>
-                                        <shar:uom>?</shar:uom>
-                                        <shar:value>?</shar:value>
-                                    </shar:Quantity>
-                                </shar:Charge>
-                            </shar:ChargeArray>
-                            <!--Optional:-->
                             <shar:LocationArray>
-                                <!--1 or more repetitions:-->
                                 <shar:Location>
-                                    <!--Optional:-->
-                                    <shar:locationName>?</shar:locationName>
+                                    <shar:locationName>Front Panels Center</shar:locationName>
                                     <shar:DecorationArray>
-                                        <!--1 or more repetitions:-->
                                         <shar:Decoration>
-                                            <!--Optional:-->
-                                            <shar:decorationName>?</shar:decorationName>
+                                            <shar:decorationName>Front Panels Center</shar:decorationName>
                                             <shar:Artwork>
-                                                <!--Optional:-->
-                                                <shar:instructions>?</shar:instructions>
-                                                <!--Optional:-->
-                                                <shar:refArtworkId>?</shar:refArtworkId>
-                                                <!--Optional:-->
-                                                <shar:totalStitchCount>?</shar:totalStitchCount>
-                                                <!--Optional:-->
                                                 <shar:ArtworkFileArray>
-                                                    <!--1 or more repetitions:-->
                                                     <shar:ArtworkFile>
-                                                        <shar:artworkType>?</shar:artworkType>
-                                                        <shar:fileLocation>?</shar:fileLocation>
-                                                        <shar:fileName>?</shar:fileName>
-                                                        <shar:transportMechanism>?</shar:transportMechanism>
+                                                        <shar:artworkType>ProductionReady</shar:artworkType>
+                                                        <shar:fileLocation>
+                                                            https://moo-mfg-artwork-images-dev.s3.us-east-2.amazonaws.com/donotprint.pdf?response-content-disposition=inline&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjELX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJGMEQCIDPLr89MszK%2FgbWF31UDALxmEBrCpf9jJ%2BjcFhZQlWHGAiAfm3jyGUmdlyR8MnP2ncV%2Blp7i5SaVT%2FW0lt8mDJjOcyrLBAju%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAMaDDU5MjIyODEzNzI5NCIMBj0moGWL55Z%2Fyc1EKp8E9ZMToezDGssitVyHt51D5Y643V%2F8QRyHbhzDmWNloLCRDhR16JcPQENAO%2FoTJwRm3YavQmlsMWAAmAeVX9B2GcBT4uwlkAQALZ0dV%2BVz3B6206SJfVs%2BuzOaLPGofk%2BT5Vx0VKQMFqfgHYa%2Fai4%2BM5ZUxKpf1ilcnYWy%2FYkszjp9zCm4erBH4GEL2KbVd42wUtVBuZxtinwDyuyskoSI9DT1hKmNX1GZ1D9cskqLzSBfX6n3l9X5pqv5hjw%2BPgU3pyFX666mNvBWjgnrzkq1Tiiac5vzBzlkc0gDSMoJvB%2F4CJv0CbIK65DFtJwG5Tc33dSI%2BrHKbntP%2Bn196uX2Xgd0AsmApndzsmBpqEmznAGcEfLR3p4%2FQmnpI7003w%2F9HNuxoQPgq3na%2FoPyKaSaL8IDT3%2BXm2Nw59jje7H%2BExtn8nPEDqnzqPw0kc0iY6xR3wTpWHeYrjmPgBJBdEalnon3PjdiVxUM6livJmvWo5anKy32KBWocb6qEb76x0cwzIGVvSC24kBw%2BzcUkaWfTF3BQuM7Ej5cK%2Bt79ziUYPlxXhRzXsqPJ1I8jop2ztAYCDm1StQ8%2BSmxHi%2FRSFYLMibZXdQhQ2HRyMpiEEtQ18Us4jFyuBnLZua216qP2CKOCYo88MjgTtc2oNoM8sXEagsyCEdl2TqL80bBD0hi259NWZMIvZOczbWapZNkf%2B6xRrgpZnCBdx7NF9uewKH4MLvF58QGOsYCXKiDhpX5axl0gaIVc8O7TU7alxcyWykIdMjpOn5QJl6mxQYqZcmqziZaN1bYwzDyeNNwZ61N3H1WdDyDQ538dB5Cad3ABQz8LJDklKfbCJrG7aZsQDwYRKgLyv2wD8TwU7XNKudOu9kJzVXm9UEtsm6RuEeHDuPG6babJeCirUiaVLgcFuRup0HOHy%2BcVJQG1wvH027TAZUzzb7ruiKgwFfn7rBnQ8rmHcMzokXCdQQIoUU%2FKxcZmpfWir4RJA%2BriBzdPxos4MrUbqbAFSTLDGVPjBmmtfrPgwDn8O0BWaMLXKGKPx0xcJnQjIdVe%2FVmM5SmLcZdPEgBRrye%2Bsz%2FL1pReD7CFTiwYxYtDL6x6Mfc%2Bxo0FwQCXs84u6fO%2FVOuiyrEz09e2KAQOgywo%2BphV%2B2YiuGwYrwAP%2FZi5YHdehHJ%2FUiY8H8%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIAYTY4MHFHEI3NEDOM%2F20250811%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20250811T124655Z&amp;X-Amz-Expires=43200&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=46ccd0b6375653a40bfb5e0cd8a99cbc19dc8156ddf9091e82a37658d2614f44
+                                                        </shar:fileLocation>
+                                                        <shar:fileName>1404320511b1a5-cad3-4bce-b9eb-51f5fbc6cb81.png</shar:fileName>
+                                                        <shar:transportMechanism>Url</shar:transportMechanism>
                                                     </shar:ArtworkFile>
                                                 </shar:ArtworkFileArray>
-                                                <!--Optional:-->
-                                                <shar:description>?</shar:description>
-                                                <!--Optional:-->
+                                                <shar:description>test</shar:description>
                                                 <shar:Dimensions>
-                                                    <!--Optional:-->
-                                                    <shar:diameter>?</shar:diameter>
-                                                    <!--Optional:-->
-                                                    <shar:height>?</shar:height>
-                                                    <!--Optional:-->
-                                                    <shar:uom>?</shar:uom>
-                                                    <!--Optional:-->
-                                                    <shar:width>?</shar:width>
-                                                    <shar:useMaxLocationDimensions>?</shar:useMaxLocationDimensions>
-                                                    <shar:geometry>?</shar:geometry>
+                                                    <shar:useMaxLocationDimensions>true</shar:useMaxLocationDimensions>
+                                                    <shar:geometry>Rectangle</shar:geometry>
                                                 </shar:Dimensions>
-                                                <!--Optional:-->
                                                 <shar:Layers>
-                                                    <shar:colorSystem>?</shar:colorSystem>
-                                                    <shar:LayerOrStopArray>
-                                                        <!--1 or more repetitions:-->
-                                                        <shar:LayerOrStop>
-                                                            <shar:color>?</shar:color>
-                                                            <shar:nameOrNumber>?</shar:nameOrNumber>
-                                                            <shar:description>?</shar:description>
-                                                        </shar:LayerOrStop>
-                                                    </shar:LayerOrStopArray>
+                                                    <shar:colorSystem>Cmyk</shar:colorSystem>
                                                 </shar:Layers>
-                                                <!--Optional:-->
-                                                <shar:TypesetArray>
-                                                    <!--1 or more repetitions:-->
-                                                    <shar:Typeset>
-                                                        <!--Optional:-->
-                                                        <shar:fontSize>?</shar:fontSize>
-                                                        <!--Optional:-->
-                                                        <shar:font>?</shar:font>
-                                                        <shar:sequenceNumber>?</shar:sequenceNumber>
-                                                        <shar:value>?</shar:value>
-                                                    </shar:Typeset>
-                                                </shar:TypesetArray>
                                             </shar:Artwork>
-                                            <shar:decorationId>?</shar:decorationId>
+                                            <shar:decorationId>390</shar:decorationId>
                                         </shar:Decoration>
                                     </shar:DecorationArray>
-                                    <shar:locationLinkId>?</shar:locationLinkId>
-                                    <shar:locationId>?</shar:locationId>
+                                    <shar:locationLinkId>1</shar:locationLinkId>
+                                    <shar:locationId>70000947</shar:locationId>
                                 </shar:Location>
                             </shar:LocationArray>
-                            <!--Optional:-->
-                            <shar:referenceNumberType>?</shar:referenceNumberType>
-                            <!--Optional:-->
-                            <shar:referenceNumber>?</shar:referenceNumber>
-                            <shar:preProductionProof>?</shar:preProductionProof>
+                            <shar:preProductionProof>false</shar:preProductionProof>
                         </shar:Configuration>
                     </ns:LineItem>
                 </ns:LineItemArray>
-                <ns:termsAndConditions>?</ns:termsAndConditions>
-                <!--Optional:-->
-                <ns:salesChannel>?</ns:salesChannel>
-                <!--Optional:-->
-                <ns:promoCode>?</ns:promoCode>
-                <!--Optional:-->
-                <ns:TaxInformationArray>
-                    <!--1 or more repetitions:-->
-                    <shar:TaxInformation>
-                        <!--1 or more repetitions:-->
-                        <shar:taxJurisdiction>?</shar:taxJurisdiction>
-                        <shar:taxExempt>?</shar:taxExempt>
-                        <shar:taxId>?</shar:taxId>
-                        <shar:taxType>?</shar:taxType>
-                        <!--Optional:-->
-                        <shar:taxAmount>?</shar:taxAmount>
-                    </shar:TaxInformation>
-                </ns:TaxInformationArray>
+                <ns:termsAndConditions>terms</ns:termsAndConditions>
             </ns:PO>
         </ns:SendPORequest>
     </soapenv:Body>

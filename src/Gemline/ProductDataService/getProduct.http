@@ -1,4 +1,4 @@
-POST https://wsp.gemline.com/GemlineWebService/ProductData/v2/GemlineProductDataService.svc
+POST https://wsd.gemline.com/GemlineWebService/ProductData/v2/GemlineProductDataService.svc
 Content-Type: text/xml;charset=UTF-8
 SOAPAction: "getProduct"
 

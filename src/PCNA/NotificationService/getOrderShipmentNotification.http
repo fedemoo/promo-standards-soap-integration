@@ -1,4 +1,4 @@
-POST https://psosn100.pcna.online/psOsn.svc
+POST https://psosn100-stg.pcna.online/psOsn.svc
 Content-Type: text/xml;charset=UTF-8
 SOAPAction: "getOrderShipmentNotification"
 
@@ -9,17 +9,16 @@ SOAPAction: "getOrderShipmentNotification"
     <soapenv:Header/>
     <soapenv:Body>
         <ns:GetOrderShipmentNotificationRequest>
+            <ns:wsVersion>1.0.0</ns:wsVersion>
             <!--Optional:-->
-            <shar:wsVersion>?</shar:wsVersion>
+            <ns:id>Moo</ns:id>
             <!--Optional:-->
-            <shar:id>?</shar:id>
+            <ns:password>r_zyel0OyUn*g.=@8TCZ>ve}+R4+q1C(w!.UIs.WMOYhmio}9LG>RFJeX+>*3dE</ns:password>
+            <ns:queryType>4</ns:queryType>
             <!--Optional:-->
-            <shar:password>?</shar:password>
-            <ns:queryType>?</ns:queryType>
+<!--            <ns:referenceNumber>45873.6124528588a5ce1209-4070-4acc-b683-382305af2f5b</ns:referenceNumber>-->
             <!--Optional:-->
-            <ns:referenceNumber>?</ns:referenceNumber>
-            <!--Optional:-->
-            <ns:shipmentDateTimeStamp>?</ns:shipmentDateTimeStamp>
+
         </ns:GetOrderShipmentNotificationRequest>
     </soapenv:Body>
 </soapenv:Envelope>
