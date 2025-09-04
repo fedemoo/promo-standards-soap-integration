@@ -12,81 +12,44 @@ SOAPAction: "sendPO"
             <shar:password>r_zyel0OyUn*g.=@8TCZ>ve}+R4+q1C(w!.UIs.WMOYhmio}9LG>RFJeX+>*3dE</shar:password>
             <ns:PO>
                 <ns:orderType>Configured</ns:orderType>
-                <ns:orderNumber>moo-test-order-18</ns:orderNumber>
+                <ns:orderNumber>moo-test-order-26</ns:orderNumber>
                 <ns:orderDate>2025-09-04T10:45:00</ns:orderDate>
-
-
-<!--                <ns:totalAmount>100.00</ns:totalAmount>-->
-
-<!--                <ns:rush>false</ns:rush>-->
                 <shar:currency>USD</shar:currency>
                 <ns:OrderContactArray>
-
                     <shar:Contact>
-                        <!--Optional:-->
                         <shar:accountName>ERIC'S COMPANY</shar:accountName>
-                        <!--Optional:-->
                         <shar:accountNumber>229014</shar:accountNumber>
                         <shar:contactType>Bill</shar:contactType>
-                        <!--Optional:-->
                         <shar:ContactDetails>
-                            <!--Optional:-->
                             <shar:attentionTo>ERIC WINGARD</shar:attentionTo>
-                            <!--Optional:-->
                             <shar:companyName>ERIC'S COMPANY</shar:companyName>
-                            <!--Optional:-->
                             <shar:address1>400 HUNT VALLEY ROAD</shar:address1>
-                            <!--Optional:-->
                             <shar:city>PITTSBURGH</shar:city>
-                            <!--Optional:-->
                             <shar:region>PA</shar:region>
-                            <!--Optional:-->
                             <shar:postalCode>15068</shar:postalCode>
-                            <!--Optional:-->
                             <shar:country>US</shar:country>
-                            <!--Optional:-->
                             <shar:email>ewingard@pcna.com</shar:email>
-                            <!--Optional:-->
-<!--                            <shar:phone>8142441509</shar:phone>-->
+                            <shar:phone>8142441509</shar:phone>
                         </shar:ContactDetails>
                     </shar:Contact>
                 </ns:OrderContactArray>
-
                 <ns:ShipmentArray>
-                    <!--1 or more repetitions:-->
                     <shar:Shipment>
-                        <!--0 to 2 repetitions:-->
                         <shar:shipReferences>Ref123</shar:shipReferences>
-                        <!--Optional:-->
-<!--                        <shar:allowConsolidation>false</shar:allowConsolidation>-->
                         <shar:blindShip>true</shar:blindShip>
                         <shar:packingListRequired>true</shar:packingListRequired>
                         <shar:ThirdPartyAccount>
-                            <!--Optional:-->
                             <shar:accountName>ED'S FEDEX</shar:accountName>
-                            <!--Optional:-->
                             <shar:accountNumber>123456789</shar:accountNumber>
-                            <!--Optional:-->
                             <shar:ContactDetails>
-                                <!--Optional:-->
                                 <shar:attentionTo>ED WINGARD JR</shar:attentionTo>
-                                <!--Optional:-->
                                 <shar:companyName>FAST EDDIE'S BAR</shar:companyName>
-                                <!--Optional:-->
                                 <shar:address1>128 BRECK LANE</shar:address1>
-                                <!--Optional:-->
-
-                                <!--Optional:-->
                                 <shar:city>JOHNSTOWN</shar:city>
-                                <!--Optional:-->
                                 <shar:region>PA</shar:region>
-                                <!--Optional:-->
                                 <shar:postalCode>15904</shar:postalCode>
-                                <!--Optional:-->
                                 <shar:country>US</shar:country>
-                                <!--Optional:-->
                                 <shar:email>FASTEDDIEJR3@GMAIL.COM</shar:email>
-                                <!--Optional:-->
                                 <shar:phone>8142667115</shar:phone>
                             </shar:ContactDetails>
                         </shar:ThirdPartyAccount>
@@ -95,44 +58,27 @@ SOAPAction: "sendPO"
                             <shar:service>GROUND</shar:service>
                         </shar:FreightDetails>
                         <shar:ShipTo>
-
                             <shar:shipmentId>100</shar:shipmentId>
                             <shar:ContactDetails>
-                                <!--Optional:-->
-<!--                                <shar:attentionTo>ED WINGARD JR</shar:attentionTo>-->
-                                <!--Optional:-->
                                 <shar:companyName>FAST EDDIE'S BAR</shar:companyName>
-                                <!--Optional:-->
                                 <shar:address1>128 BRECK LANE</shar:address1>
-                                <!--Optional:-->
-
-                                <!--Optional:-->
                                 <shar:city>JOHNSTOWN</shar:city>
-                                <!--Optional:-->
                                 <shar:region>PA</shar:region>
-                                <!--Optional:-->
                                 <shar:postalCode>15904</shar:postalCode>
-                                <!--Optional:-->
                                 <shar:country>US</shar:country>
-                                <!--Optional:-->
                                 <shar:email>FASTEDDIEJR3@GMAIL.COM</shar:email>
-                                <!--Optional:-->
                                 <shar:phone>8142667115</shar:phone>
                             </shar:ContactDetails>
-
                         </shar:ShipTo>
                     </shar:Shipment>
                 </ns:ShipmentArray>
                 <ns:LineItemArray>
-                    <!--1 or more repetitions:-->
                     <ns:LineItem>
                         <shar:fobId>15068</shar:fobId>
                         <ns:lineNumber>1</ns:lineNumber>
-                        <!--Optional:-->
                         <ns:lineReferenceId>102529</ns:lineReferenceId>
                         <shar:description>Copper Vacuum Insulated Bottle 17oz</shar:description>
                         <ns:lineType>New</ns:lineType>
-                        <!--Optional:-->
                         <shar:Quantity>
                             <shar:uom>EA</shar:uom>
                             <shar:value>100</shar:value>
@@ -140,27 +86,17 @@ SOAPAction: "sendPO"
                         <shar:ToleranceDetails>
                             <shar:tolerance>ExactOnly</shar:tolerance>
                         </shar:ToleranceDetails>
-<!--                        <ns:allowPartialShipments>false</ns:allowPartialShipments>-->
                         <shar:productId>1601-81</shar:productId>
                         <ns:PartArray>
-                        <!--Zero or more repetitions:-->
                         <shar:Part>
-<!--                            <shar:partGroup>1</shar:partGroup>-->
                             <shar:partId>1601-81BK</shar:partId>
-<!--                            <shar:customerSupplied>false</shar:customerSupplied>-->
-<!--                            <shar:description>Hydro Flask® Wide Mouth w/ Flex Straw Cap 32oz</shar:description>-->
                             <shar:Quantity>
                                 <shar:uom>EA</shar:uom>
                                 <shar:value>100</shar:value>
                             </shar:Quantity>
                             <shar:locationLinkId>1</shar:locationLinkId>
-<!--                            <shar:unitPrice>8.57</shar:unitPrice>-->
-<!--                            <shar:extendedPrice>857</shar:extendedPrice>-->
-                            <!--Optional:-->
                             <shar:ShipmentLinkArray>
-                                <!--Zero or more repetitions:-->
                                 <shar:ShipmentLink>
-                                    <!--Optional:-->
                                     <shar:Quantity>
                                         <shar:uom>EA</shar:uom>
                                         <shar:value>100</shar:value>
@@ -172,25 +108,16 @@ SOAPAction: "sendPO"
                         </ns:PartArray>
                         <shar:Configuration>
                             <shar:LocationArray>
-                                <!--Zero or more repetitions:-->
                                 <shar:Location>
-                                    <!--Optional:-->
                                     <shar:locationName>Centered on tumbler opposite Hydro Flask, - Center of art 3.68" up from bottom</shar:locationName>
-                                    <!--Optional:-->
                                     <shar:DecorationArray>
-                                        <!--Zero or more repetitions:-->
                                         <shar:Decoration>
-                                            <!--Optional:-->
                                             <shar:decorationName>Digital Color Print</shar:decorationName>
-                                            <!--Optional:-->
                                             <shar:Artwork>
                                                 <shar:ArtworkFileArray>
-                                                    <!--Zero or more repetitions:-->
                                                     <shar:ArtworkFile>
                                                         <shar:artworkType>ProductionReady</shar:artworkType>
-                                                        <!--Optional:-->
                                                         <shar:fileLocation>https://integrationdesignerimages.artifi.net/UserPhoto/ba4ad608-c4bd-4e71-b14b-81506445b434/Photos/Standard/1404320511b1a5-cad3-4bce-b9eb-51f5fbc6cb81.png</shar:fileLocation>
-                                                        <!--Optional:-->
                                                         <shar:fileName>1404320511b1a5-cad3-4bce-b9eb-51f5fbc6cb81.png</shar:fileName>
                                                         <shar:transportMechanism>Url</shar:transportMechanism>
                                                     </shar:ArtworkFile>
@@ -199,17 +126,15 @@ SOAPAction: "sendPO"
                                                 <shar:description>NASA LOGO</shar:description>
                                                 <!--Optional:-->
                                                 <shar:Dimensions>
-
                                                     <shar:useMaxLocationDimensions>true</shar:useMaxLocationDimensions>
-<!--                                                    <shar:geometry>Rectangle</shar:geometry>-->
                                                 </shar:Dimensions>
                                                 <shar:Layers>
-                                                    <shar:colorSystem>Cmyk</shar:colorSystem>
+                                                    <shar:colorSystem>Pms</shar:colorSystem>
                                                     <shar:LayerOrStopArray>
                                                         <shar:LayerOrStop>
-                                                                <shar:color>C:100 M:0 Y:0 K:0</shar:color>
-                                                                <shar:nameOrNumber>Cyan</shar:nameOrNumber>
-                                                                <shar:description>Main background fill</shar:description>
+                                                                <shar:color>CMYK</shar:color>
+                                                                <shar:nameOrNumber>1</shar:nameOrNumber>
+                                                                <shar:description>Complete Art</shar:description>
                                                         </shar:LayerOrStop>
                                                     </shar:LayerOrStopArray>
                                                 </shar:Layers>
@@ -221,7 +146,6 @@ SOAPAction: "sendPO"
                                     <shar:locationId>17705</shar:locationId>
                                 </shar:Location>
                             </shar:LocationArray>
-<!--                            <shar:preProductionProof>false</shar:preProductionProof>-->
                         </shar:Configuration>
                     </ns:LineItem>
                 </ns:LineItemArray>

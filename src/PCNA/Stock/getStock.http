@@ -1,0 +1,34 @@
+#POST https://psproductdata200.pcna.online/psProductData.svc
+POST https://psinventory200-stg.pcna.online/psInventory.svc
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "getInventoryLevels"
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.promostandards.org/WSDL/Inventory/2.0.0/" xmlns:shar="http://www.promostandards.org/WSDL/Inventory/2.0.0/SharedObjects/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:GetInventoryLevelsRequest>
+            <shar:wsVersion>2.0.0</shar:wsVersion>
+            <!--Optional:-->
+            <shar:id>Moo</shar:id>
+            <shar:password>r_zyel0OyUn*g.=@8TCZ>ve}+R4+q1C(w!.UIs.WMOYhmio}9LG>RFJeX+>*3dE</shar:password>
+            <shar:productId>1601-92</shar:productId>
+            <!--Optional:-->
+            <shar:Filter>
+                <!--Optional:-->
+                <shar:partIdArray>
+                    <shar:partId>1601-92WH</shar:partId>
+                </shar:partIdArray>
+<!--                &lt;!&ndash;Optional:&ndash;&gt;-->
+<!--                <shar:LabelSizeArray>-->
+<!--                    &lt;!&ndash;Zero or more repetitions:&ndash;&gt;-->
+<!--                    <shar:labelSize>?</shar:labelSize>-->
+<!--                </shar:LabelSizeArray>-->
+<!--                &lt;!&ndash;Optional:&ndash;&gt;-->
+<!--                <shar:PartColorArray>-->
+<!--                    &lt;!&ndash;Zero or more repetitions:&ndash;&gt;-->
+<!--                    <shar:partColor>?</shar:partColor>-->
+<!--                </shar:PartColorArray>-->
+            </shar:Filter>
+        </ns:GetInventoryLevelsRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

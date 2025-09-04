@@ -13,10 +13,8 @@ SOAPAction: "getOrderStatusDetails"
             <ns:wsVersion>1.0.0</ns:wsVersion>
             <ns:id>3004775</ns:id>
             <ns:password>fE1oK6vB4eX8oC9i</ns:password>
-            <ns:queryType>2</ns:queryType>
-            <!--Optional:-->
+            <ns:queryType>1</ns:queryType>
             <ns:referenceNumber>1000001</ns:referenceNumber>
-            <ns:statusTimeStamp>2025-06-04T09:30:00</ns:statusTimeStamp>
         </ns:GetOrderStatusDetailsRequest>
     </soapenv:Body>
 </soapenv:Envelope>

@@ -11,45 +11,52 @@ SOAPAction: "sendPO"
             <shar:password>fE1oK6vB4eX8oC9i</shar:password>
             <ns:PO>
                 <ns:orderType>Configured</ns:orderType>
-                <ns:orderNumber>1000005</ns:orderNumber>
+                <ns:orderNumber>MOO-TEST-ORDER-003</ns:orderNumber>
                 <ns:orderDate>2025-08-04T10:45:00</ns:orderDate>
-
-                <ns:rush>false</ns:rush>
                 <shar:currency>USD</shar:currency>
-                <shar:DigitalProof>
-                    <shar:required>false</shar:required>
-                </shar:DigitalProof>
                 <ns:OrderContactArray>
                     <shar:Contact>
-                        <shar:accountName>ERIC'S COMPANY</shar:accountName>
+                        <shar:accountName>MOO</shar:accountName>
                         <shar:accountNumber>229014</shar:accountNumber>
                         <shar:contactType>Bill</shar:contactType>
                         <shar:ContactDetails>
-                            <shar:attentionTo>Jane Smith</shar:attentionTo>
-                            <shar:companyName>Acme Corp</shar:companyName>
+                            <shar:attentionTo>Necati</shar:attentionTo>
+                            <shar:companyName>Necati Corp</shar:companyName>
                             <shar:address1>123 Main St</shar:address1>
                             <shar:city>New York</shar:city>
                             <shar:region>NY</shar:region>
                             <shar:postalCode>10001</shar:postalCode>
                             <shar:country>US</shar:country>
-                            <shar:email>jane.smith@example.com</shar:email>
-                            <shar:phone>555-123-4567</shar:phone>
+                            <shar:email>necati.munir@moo.com</shar:email>
+                            <shar:phone>8142441509</shar:phone>
                         </shar:ContactDetails>
                     </shar:Contact>
                 </ns:OrderContactArray>
-
                 <ns:ShipmentArray>
                     <shar:Shipment>
                         <shar:shipReferences>Ref123</shar:shipReferences>
                         <shar:allowConsolidation>false</shar:allowConsolidation>
-                        <shar:blindShip>true</shar:blindShip>
                         <shar:packingListRequired>true</shar:packingListRequired>
+                        <shar:ThirdPartyAccount>
+                            <shar:accountName>ED'S FEDEX</shar:accountName>
+                            <shar:accountNumber>123456789</shar:accountNumber>
+                            <shar:ContactDetails>
+                                <shar:companyName>Necati Corp</shar:companyName>
+                                <shar:address1>123 Main St</shar:address1>
+                                <shar:city>New York</shar:city>
+                                <shar:region>NY</shar:region>
+                                <shar:postalCode>10001</shar:postalCode>
+                                <shar:country>US</shar:country>
+                                <shar:email>necati.munir@moo.com</shar:email>
+                                <shar:phone>8142441509</shar:phone>
+                            </shar:ContactDetails>
+                        </shar:ThirdPartyAccount>
                         <shar:FreightDetails>
-                            <shar:carrier>FedEx</shar:carrier>
-                            <shar:service>2Day</shar:service>
+                            <shar:carrier>FEDEX</shar:carrier>
+                            <shar:service>GROUND</shar:service>
                         </shar:FreightDetails>
                         <shar:ShipTo>
-                            <shar:customerPickup>false</shar:customerPickup>
+                            <shar:shipmentId>100</shar:shipmentId>
                             <shar:ContactDetails>
                                 <shar:attentionTo>Jane Smith</shar:attentionTo>
                                 <shar:companyName>Acme Corp</shar:companyName>
@@ -61,7 +68,6 @@ SOAPAction: "sendPO"
                                 <shar:email>jane.smith@example.com</shar:email>
                                 <shar:phone>555-123-4567</shar:phone>
                             </shar:ContactDetails>
-                            <shar:shipmentId>100</shar:shipmentId>
                         </shar:ShipTo>
                     </shar:Shipment>
                 </ns:ShipmentArray>
@@ -75,12 +81,13 @@ SOAPAction: "sendPO"
                             <shar:uom>EA</shar:uom>
                             <shar:value>100</shar:value>
                         </shar:Quantity>
-                        <shar:fobId>1</shar:fobId>
+                        <!--    <shar:fobId>1</shar:fobId>-->
                         <shar:ToleranceDetails>
                             <shar:tolerance>ExactOnly</shar:tolerance>
                         </shar:ToleranceDetails>
                         <ns:allowPartialShipments>false</ns:allowPartialShipments>
-
+                        <!--    <shar:unitPrice>8.91</shar:unitPrice>-->
+                        <!--    <ns:lineItemTotal>891.00</ns:lineItemTotal>-->
                         <shar:productId>102529</shar:productId>
                         <shar:lineItemGroupingId>1</shar:lineItemGroupingId>
                         <ns:PartArray>
@@ -88,7 +95,7 @@ SOAPAction: "sendPO"
                                 <shar:partGroup>1</shar:partGroup>
                                 <shar:partId>102529-639</shar:partId>
                                 <shar:customerSupplied>false</shar:customerSupplied>
-                                <shar:description>Ahead The Force Recycled Performance Cap - Trench</shar:description>
+                                <shar:description>test</shar:description>
                                 <shar:Quantity>
                                     <shar:uom>EA</shar:uom>
                                     <shar:value>100</shar:value>
@@ -116,30 +123,33 @@ SOAPAction: "sendPO"
                                                 <shar:ArtworkFileArray>
                                                     <shar:ArtworkFile>
                                                         <shar:artworkType>ProductionReady</shar:artworkType>
-                                                        <shar:fileLocation>
-                                                            https://moo-mfg-artwork-images-dev.s3.us-east-2.amazonaws.com/donotprint.pdf?response-content-disposition=inline&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjELX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMiJGMEQCIDPLr89MszK%2FgbWF31UDALxmEBrCpf9jJ%2BjcFhZQlWHGAiAfm3jyGUmdlyR8MnP2ncV%2Blp7i5SaVT%2FW0lt8mDJjOcyrLBAju%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAMaDDU5MjIyODEzNzI5NCIMBj0moGWL55Z%2Fyc1EKp8E9ZMToezDGssitVyHt51D5Y643V%2F8QRyHbhzDmWNloLCRDhR16JcPQENAO%2FoTJwRm3YavQmlsMWAAmAeVX9B2GcBT4uwlkAQALZ0dV%2BVz3B6206SJfVs%2BuzOaLPGofk%2BT5Vx0VKQMFqfgHYa%2Fai4%2BM5ZUxKpf1ilcnYWy%2FYkszjp9zCm4erBH4GEL2KbVd42wUtVBuZxtinwDyuyskoSI9DT1hKmNX1GZ1D9cskqLzSBfX6n3l9X5pqv5hjw%2BPgU3pyFX666mNvBWjgnrzkq1Tiiac5vzBzlkc0gDSMoJvB%2F4CJv0CbIK65DFtJwG5Tc33dSI%2BrHKbntP%2Bn196uX2Xgd0AsmApndzsmBpqEmznAGcEfLR3p4%2FQmnpI7003w%2F9HNuxoQPgq3na%2FoPyKaSaL8IDT3%2BXm2Nw59jje7H%2BExtn8nPEDqnzqPw0kc0iY6xR3wTpWHeYrjmPgBJBdEalnon3PjdiVxUM6livJmvWo5anKy32KBWocb6qEb76x0cwzIGVvSC24kBw%2BzcUkaWfTF3BQuM7Ej5cK%2Bt79ziUYPlxXhRzXsqPJ1I8jop2ztAYCDm1StQ8%2BSmxHi%2FRSFYLMibZXdQhQ2HRyMpiEEtQ18Us4jFyuBnLZua216qP2CKOCYo88MjgTtc2oNoM8sXEagsyCEdl2TqL80bBD0hi259NWZMIvZOczbWapZNkf%2B6xRrgpZnCBdx7NF9uewKH4MLvF58QGOsYCXKiDhpX5axl0gaIVc8O7TU7alxcyWykIdMjpOn5QJl6mxQYqZcmqziZaN1bYwzDyeNNwZ61N3H1WdDyDQ538dB5Cad3ABQz8LJDklKfbCJrG7aZsQDwYRKgLyv2wD8TwU7XNKudOu9kJzVXm9UEtsm6RuEeHDuPG6babJeCirUiaVLgcFuRup0HOHy%2BcVJQG1wvH027TAZUzzb7ruiKgwFfn7rBnQ8rmHcMzokXCdQQIoUU%2FKxcZmpfWir4RJA%2BriBzdPxos4MrUbqbAFSTLDGVPjBmmtfrPgwDn8O0BWaMLXKGKPx0xcJnQjIdVe%2FVmM5SmLcZdPEgBRrye%2Bsz%2FL1pReD7CFTiwYxYtDL6x6Mfc%2Bxo0FwQCXs84u6fO%2FVOuiyrEz09e2KAQOgywo%2BphV%2B2YiuGwYrwAP%2FZi5YHdehHJ%2FUiY8H8%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIAYTY4MHFHEI3NEDOM%2F20250811%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20250811T124655Z&amp;X-Amz-Expires=43200&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=46ccd0b6375653a40bfb5e0cd8a99cbc19dc8156ddf9091e82a37658d2614f44
-                                                        </shar:fileLocation>
-                                                        <shar:fileName>1404320511b1a5-cad3-4bce-b9eb-51f5fbc6cb81.png</shar:fileName>
+                                                        <shar:fileLocation>https://moo-mfg-artwork-images-dev.s3.us-east-2.amazonaws.com/donotprint.pdf?response-content-disposition=inline&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB0aCXVzLWVhc3QtMiJIMEYCIQDONOLAtqk6%2BfOUHmk9ywA62guv6e2AxEyKsFApCsAj1gIhANEH%2FbqYpCg2lDdke3xNID8bhzK4dV8279k9CcYJXOpDKsIECHYQAxoMNTkyMjI4MTM3Mjk0IgyHfnEJRW1OihOhNLQqnwQaUVsWJ5lL5hgKHKep%2ByrW4An2vLomEfPITEhQMIviGi710Hrp7lzI5UuwFKkpw%2Bfr0642BqxAUhZOBLg6ZZuhe74oTM9lAYyIcrNMOXM0%2FCbsvbaWcTLrH%2BFaLCf9KnSOjWcZ6ozVXs19Y4l3Hh6ikyB9hBdbJFxoEOE6gBYb9BjsVeWYo%2BEvRXzfBnf9Cm9IkK8IfccrVHFCJgha5s%2BOKkO4GQb3hOI1XyVaunZ5CRIQV6ug7%2BA6Rc%2FFVnQ%2FSXJppYmJ8GCnTIHMa3tjZnoZLy%2Bv5Sy4%2FckrEaou%2BnO%2B5gYMa8LdjvalgB1r%2BTN2MwYF%2FjhBZ31begxvslCrsPlQYp4iJseK2IoK44Z9g88duzc1jixGDBvusqbxWMfWvyoPbym2rA3MYnx30j8ajxih3tCUlaYcx74A3INi%2F3C5OL6RmhLfYH3%2FjfqyP9ds44ftWF7ukdI3URLDtXQeV8ow1uw3xOF%2BRiH95Plj%2FB67IyONryI4tUfSkv55%2BDxSBndHMiiHB%2Buji14RdQerPWtgjd%2B5U%2BquO4XaYUAOWRz7YBZIrtW1p0T%2F6DJtG0QtB3K1NPw3%2Fdko4ltAJuuZVzRoJjOdOTWYLy8lzDV3ktVT4NZqytPC%2BOH%2BImJxJFlAkSr9xhKqn0BR0VKW9eJs0Yvm7mQaemFaQ1ARmsUBD0QjkGVzYqVN2gScvbG4PcfXkjFtXtP9MTpyzjLBH4bRCHAwy9e2xQY6xAIpvSF2uS%2F4nphquEog7RuZiMwIm7lYGXPMz3u50r4SfmPmGLw71HdjG5qm6CLj9%2FLpacX%2FmM%2FH2qTKCsy39E%2B4jOKrfzez4rdt6Cu3UpqNGaDFU6BEJmmejq%2B1XrSWU1e6nz6jd5XzSdgGBT0L6rnIbRNcj%2BOQwhjr6uTNNX1og7UmE%2FgxTNxRQSOU%2BEssBFjMA4LA%2BV9oeaRCgQTbTi4HLJKFluz%2FbwKC0%2FeOSk8gL%2BzYL8Jm0WhwhxtlSJnNaekMuLWfixo8R36hIWpzgsr88%2BoEV%2Fseb6DAc1bvlfgRbhExbUK5GxyKwzllLAXzQ9j5fLIgU%2FvImcO6sFgjZBAJe7beih96jWxdL5p2c9eQky9Scze%2Be0Khh6JH0ecg%2BTnV7CYR2CgR0znpW39MUX1BzEs28u8iSfVugYYJjri0f0fIFFA%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=ASIAYTY4MHFHMD4IJ6T7%2F20250826%2Fus-east-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20250826T124434Z&amp;X-Amz-Expires=43200&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=dae78016ee977203fcf22fd733bf441b4de1f922ac783cc39b1de5b11a0ad1c6</shar:fileLocation>
+                                                        <shar:fileName>donotprint.pdf</shar:fileName>
                                                         <shar:transportMechanism>Url</shar:transportMechanism>
                                                     </shar:ArtworkFile>
                                                 </shar:ArtworkFileArray>
-                                                <shar:description>test</shar:description>
+                                                <shar:description>Production Ready</shar:description>
                                                 <shar:Dimensions>
                                                     <shar:useMaxLocationDimensions>true</shar:useMaxLocationDimensions>
-                                                    <shar:geometry>Rectangle</shar:geometry>
                                                 </shar:Dimensions>
                                                 <shar:Layers>
-                                                    <shar:colorSystem>Cmyk</shar:colorSystem>
+                                                    <shar:colorSystem>Pms</shar:colorSystem>
+                                                    <shar:LayerOrStopArray>
+                                                        <shar:LayerOrStop>
+                                                            <shar:color>CMYK</shar:color>
+                                                            <shar:nameOrNumber>1</shar:nameOrNumber>
+                                                            <shar:description>Complete Art</shar:description>
+                                                        </shar:LayerOrStop>
+                                                    </shar:LayerOrStopArray>
                                                 </shar:Layers>
                                             </shar:Artwork>
-                                            <shar:decorationId>390</shar:decorationId>
+                                            <shar:decorationId>100</shar:decorationId>
                                         </shar:Decoration>
                                     </shar:DecorationArray>
                                     <shar:locationLinkId>1</shar:locationLinkId>
                                     <shar:locationId>70000947</shar:locationId>
                                 </shar:Location>
                             </shar:LocationArray>
-                            <shar:preProductionProof>false</shar:preProductionProof>
                         </shar:Configuration>
                     </ns:LineItem>
                 </ns:LineItemArray>

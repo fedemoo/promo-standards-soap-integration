@@ -14,9 +14,8 @@ SOAPAction: "getOrderShipmentNotification"
             <ns:id>Moo</ns:id>
             <!--Optional:-->
             <ns:password>r_zyel0OyUn*g.=@8TCZ>ve}+R4+q1C(w!.UIs.WMOYhmio}9LG>RFJeX+>*3dE</ns:password>
-            <ns:queryType>4</ns:queryType>
-            <!--Optional:-->
-<!--            <ns:referenceNumber>45873.6124528588a5ce1209-4070-4acc-b683-382305af2f5b</ns:referenceNumber>-->
+            <ns:queryType>1</ns:queryType>
+            <ns:referenceNumber>moo-test-order-21</ns:referenceNumber>
             <!--Optional:-->
 
         </ns:GetOrderShipmentNotificationRequest>

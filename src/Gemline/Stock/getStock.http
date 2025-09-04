@@ -1,0 +1,34 @@
+POST https://wsp.gemline.com/GemlineWebService/Inventory/v2/GemlineInventoryService.svc
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "getInventoryLevels"
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.promostandards.org/WSDL/Inventory/2.0.0/" xmlns:shar="http://www.promostandards.org/WSDL/Inventory/2.0.0/SharedObjects/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ns:GetInventoryLevelsRequest>
+            <shar:wsVersion>2.0.0</shar:wsVersion>
+            <!--Optional:-->
+            <shar:id>3004775</shar:id>
+            <shar:password>fE1oK6vB4eX8oC9i</shar:password>
+            <shar:productId>102529</shar:productId>
+            <!--Optional:-->
+            <shar:Filter>
+                <!--Optional:-->
+                <shar:partIdArray>
+                    <!--Zero or more repetitions:-->
+                    <shar:partId>102529-331</shar:partId>
+                </shar:partIdArray>
+<!--                &lt;!&ndash;Optional:&ndash;&gt;-->
+<!--                <shar:LabelSizeArray>-->
+<!--                    &lt;!&ndash;Zero or more repetitions:&ndash;&gt;-->
+<!--                    <shar:labelSize>?</shar:labelSize>-->
+<!--                </shar:LabelSizeArray>-->
+<!--                &lt;!&ndash;Optional:&ndash;&gt;-->
+<!--                <shar:PartColorArray>-->
+<!--                    &lt;!&ndash;Zero or more repetitions:&ndash;&gt;-->
+<!--                    <shar:partColor>?</shar:partColor>-->
+<!--                </shar:PartColorArray>-->
+            </shar:Filter>
+        </ns:GetInventoryLevelsRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

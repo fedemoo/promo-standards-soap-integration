@@ -17,11 +17,8 @@ SOAPAction: "getOrderStatusDetails"
             <ns:id>Moo</ns:id>
             <!--Optional:-->
             <ns:password>r_zyel0OyUn*g.=@8TCZ>ve}+R4+q1C(w!.UIs.WMOYhmio}9LG>RFJeX+>*3dE</ns:password>
-            <ns:queryType>3</ns:queryType>
-
-<!--            <ns:referenceNumber>100-test-2</ns:referenceNumber>-->
-<!--            <ns:statusTimeStamp>2025-06-04T09:30:00</ns:statusTimeStamp>-->
-
+            <ns:queryType>1</ns:queryType>
+            <ns:referenceNumber>moo-test-order-21</ns:referenceNumber>
         </ns:GetOrderStatusDetailsRequest>
     </soapenv:Body>
 </soapenv:Envelope>
